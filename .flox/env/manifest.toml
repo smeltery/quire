@@ -1,0 +1,30 @@
+schema-version = "1.16.0"
+
+[install]
+bun.pkg-path = "bun"
+bun.version = "1.3.13"
+git.pkg-path = "git"
+gh.pkg-path = "gh"
+pre-commit.pkg-path = "pre-commit"
+actionlint.pkg-path = "actionlint"
+shellcheck.pkg-path = "shellcheck"
+
+[hook]
+on-activate = '''
+  cd "$FLOX_ENV_PROJECT"
+  if [ ! -d node_modules ] || [ bun.lock -nt node_modules ]; then
+    echo "quire: installing dependencies…" >&2
+    bun install --frozen-lockfile >&2
+  fi
+  if [ "${CI:-}" != "true" ] && [ -d .git ]; then
+    pre-commit install --install-hooks >/dev/null 2>&1 || true
+  fi
+'''
+
+[profile]
+common = '''
+  echo "quire ready — bun $(bun --version) · bun run dev · bun run ci" >&2
+'''
+
+[options]
+systems = ["aarch64-darwin", "x86_64-darwin", "aarch64-linux", "x86_64-linux"]

@@ -1,0 +1,62 @@
+{
+  "path": "/docs/examples/api-reference",
+  "title": "API endpoint reference",
+  "group": "Examples",
+  "description": "An endpoint page: method badges, paths, cURL examples, and a request sequence.",
+  "sections": [
+    {
+      "id": "flow",
+      "title": "Request flow",
+      "paragraphs": [
+        "A typical client creates a resource, reads it back, and deletes it when done."
+      ],
+      "diagram": {
+        "title": "Widget lifecycle sequence",
+        "actors": ["Client", "Widgets API", "Store"],
+        "steps": [
+          [0, 1, "POST /v1/widgets"],
+          [1, 2, "Insert"],
+          [1, 0, "201 · widget ID"],
+          [0, 1, "GET /v1/widgets/{id}"],
+          [1, 0, "200 · widget"],
+          [0, 1, "DELETE /v1/widgets/{id}"],
+          [1, 0, "204"]
+        ],
+        "caption": "Every request carries the same bearer token."
+      }
+    },
+    {
+      "id": "create-widget",
+      "title": "Create a widget",
+      "paragraphs": ["Creates a widget and returns its ID."],
+      "endpoint": {
+        "method": "POST",
+        "path": "/v1/widgets"
+      },
+      "code": "curl \"$API_URL/v1/widgets\" \\\n  -H \"Authorization: Bearer $API_KEY\" \\\n  -d '{\"name\":\"demo\"}'",
+      "language": "cURL"
+    },
+    {
+      "id": "get-widget",
+      "title": "Get a widget",
+      "paragraphs": ["Returns one widget owned by the caller."],
+      "endpoint": {
+        "method": "GET",
+        "path": "/v1/widgets/{id}"
+      },
+      "code": "{\n  \"id\": \"w_123\",\n  \"name\": \"demo\"\n}",
+      "language": "Example response"
+    },
+    {
+      "id": "delete-widget",
+      "title": "Delete a widget",
+      "paragraphs": ["Removes the widget. Success returns HTTP 204."],
+      "endpoint": {
+        "method": "DELETE",
+        "path": "/v1/widgets/{id}"
+      },
+      "code": "curl -X DELETE \"$API_URL/v1/widgets/$ID\" \\\n  -H \"Authorization: Bearer $API_KEY\"",
+      "language": "cURL"
+    }
+  ]
+}

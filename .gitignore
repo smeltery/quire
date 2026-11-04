@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.DS_Store
+.env
+.env.*
+*.log
+coverage/
+.flox/run
+.flox/cache
+.flox/log
+.flox/lib
+.flox/xdg-*
+.flox/tmp
+.docs-site/

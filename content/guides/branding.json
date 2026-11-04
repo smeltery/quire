@@ -1,0 +1,53 @@
+{
+  "path": "/docs/guides/branding",
+  "title": "Brand the site",
+  "group": "Guides",
+  "description": "Set the name, links, logo, and color tokens in brand.json. One file controls every visible identity detail.",
+  "sections": [
+    {
+      "id": "identity",
+      "title": "Name and links",
+      "paragraphs": [
+        "name is used in titles and prompts; wordmark is shown in the header. homepage is where the back links point, and repository plus branch build the edit and source links."
+      ],
+      "code": "{\n  \"name\": \"acme\",\n  \"wordmark\": \"acme.\",\n  \"homepage\": \"https://acme.dev\",\n  \"repository\": \"https://github.com/acme/docs\",\n  \"branch\": \"main\"\n}",
+      "language": "brand.json"
+    },
+    {
+      "id": "logo",
+      "title": "Logo and social image",
+      "paragraphs": [
+        "Replace public/logo.svg and public/og.svg. Keep the logo square; it renders at 25 pixels in the header and as the favicon."
+      ]
+    },
+    {
+      "id": "theme",
+      "title": "Color tokens",
+      "paragraphs": [
+        "Each key in theme becomes a CSS custom property on the root element. The defaults reproduce the reference palette; change them together so contrast stays readable."
+      ],
+      "table": [
+        ["Token", "Used for"],
+        ["ink, muted, subtle", "Body text, secondary text, quiet labels"],
+        ["paper, surface, line", "Page background, cards and code, dividers"],
+        [
+          "accent, accent-ink, accent-mid",
+          "Focus rings, active links, diagram arrows"
+        ],
+        [
+          "accent-soft, accent-line, accent-border",
+          "Selected backgrounds, borders, diagram boxes"
+        ],
+        ["button, button-hover", "Solid buttons"],
+        ["font", "Body font stack"]
+      ]
+    },
+    {
+      "id": "navigation",
+      "title": "Header, groups, and search",
+      "paragraphs": [
+        "nav lists header links. groups sets sidebar order; a page whose group is missing from the list will not appear in the sidebar. popular lists the pages shown before a reader types a search query."
+      ]
+    }
+  ]
+}

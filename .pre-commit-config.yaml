@@ -1,0 +1,58 @@
+# Mirrors CI: the ci workflow runs `pre-commit run --all-files` inside Flox.
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-merge-conflict
+      - id: check-yaml
+      - id: check-json
+      - id: check-added-large-files
+
+  - repo: local
+    hooks:
+      - id: format
+        name: biome format
+        entry: bun run format:check
+        language: system
+        pass_filenames: false
+      - id: lint
+        name: biome lint
+        entry: bun run lint
+        language: system
+        pass_filenames: false
+      - id: typecheck
+        name: typecheck
+        entry: bun run typecheck
+        language: system
+        pass_filenames: false
+        types_or: [ts, tsx, json]
+      - id: test
+        name: bun test
+        entry: bun run test
+        language: system
+        pass_filenames: false
+        types_or: [ts, tsx, json]
+      - id: build
+        name: vite build
+        entry: bun run build
+        language: system
+        pass_filenames: false
+      - id: docs
+        name: markdown, mermaid, links
+        entry: bun run check:docs
+        language: system
+        pass_filenames: false
+        types_or: [markdown, json]
+      - id: budgets
+        name: LOC budgets
+        entry: bun run check:budgets
+        language: system
+        pass_filenames: false
+      - id: actionlint
+        name: actionlint
+        entry: actionlint
+        language: system
+        pass_filenames: false
+        files: ^\.github/

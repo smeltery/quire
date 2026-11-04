@@ -1,0 +1,64 @@
+{
+  "path": "/docs/reference/page-schema",
+  "title": "Page schema",
+  "group": "Reference",
+  "description": "Every field a content page and its sections accept. Unknown fields fail the content test.",
+  "sections": [
+    {
+      "id": "page",
+      "title": "Page fields",
+      "paragraphs": [],
+      "table": [
+        ["Field", "Required", "Meaning"],
+        ["path", "yes", "URL path, starting with /docs"],
+        ["title", "yes", "Sidebar label and h1"],
+        ["group", "yes", "Sidebar group; must be listed in brand.json"],
+        [
+          "description",
+          "yes",
+          "Lead paragraph, meta description, and card text"
+        ],
+        ["order", "no", "Sort position within the group"],
+        [
+          "hero",
+          "no",
+          "Large landing heading with optional notice and base value"
+        ],
+        ["sections", "yes", "Ordered list of sections"]
+      ]
+    },
+    {
+      "id": "section",
+      "title": "Section fields",
+      "paragraphs": [],
+      "table": [
+        ["Field", "Required", "Meaning"],
+        ["id", "yes", "Anchor and table-of-contents target; unique per page"],
+        ["title", "yes", "Section heading"],
+        ["paragraphs", "yes", "Plain-text paragraphs; may be empty"],
+        ["endpoint", "no", "method and path shown as an API heading"],
+        ["notice", "no", "Callout text"],
+        ["diagram", "no", "Sequence diagram data"],
+        ["items", "no", "Bullet list"],
+        ["table", "no", "Rows of cells"],
+        ["code, language", "no", "Code block and its label"],
+        ["links", "no", "Cards with label, href, and optional icon"]
+      ]
+    },
+    {
+      "id": "icons",
+      "title": "Card icons",
+      "paragraphs": ["Link cards accept these icon names."],
+      "items": [
+        "terminal",
+        "shell",
+        "server",
+        "folder",
+        "copy",
+        "up",
+        "chat",
+        "arrow"
+      ]
+    }
+  ]
+}

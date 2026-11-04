@@ -1,0 +1,38 @@
+{
+  "path": "/docs/guides/deploying",
+  "title": "Deploy",
+  "group": "Guides",
+  "description": "bun run build writes a static dist/ folder. Serve it from any static host and point unknown paths at 404.html.",
+  "sections": [
+    {
+      "id": "build",
+      "title": "Build",
+      "paragraphs": [
+        "The build type-checks, bundles, and prerenders one index.html per page path plus a 404.html."
+      ],
+      "code": "bun run build\nbun run preview",
+      "language": "Terminal"
+    },
+    {
+      "id": "hosts",
+      "title": "Hosts",
+      "paragraphs": [
+        "Any host that serves files works. Configure the not-found page as 404.html so mistyped links still render the docs shell with search."
+      ],
+      "table": [
+        ["Host", "Setting"],
+        ["GitHub Pages", "Publish dist/; 404.html is used automatically"],
+        ["Cloudflare Pages", "Build command bun run build, output dist"],
+        ["Netlify", "Publish directory dist"],
+        ["Vercel", "Framework preset Vite, output dist"]
+      ]
+    },
+    {
+      "id": "releases",
+      "title": "Releases",
+      "paragraphs": [
+        "When CI passes on main, a tag is cut automatically and the release workflow attaches a zipped dist/ to the GitHub release, so you can deploy a known version."
+      ]
+    }
+  ]
+}

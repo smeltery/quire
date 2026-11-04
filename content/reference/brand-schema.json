@@ -1,0 +1,27 @@
+{
+  "path": "/docs/reference/brand-schema",
+  "title": "Brand schema",
+  "group": "Reference",
+  "description": "Every key in brand.json and where it appears on the site.",
+  "sections": [
+    {
+      "id": "keys",
+      "title": "Keys",
+      "paragraphs": [],
+      "table": [
+        ["Key", "Appears in"],
+        ["name", "Titles, back links, AI chat prompt"],
+        ["wordmark", "Header brand"],
+        ["description", "Default meta description and 404 page"],
+        ["homepage", "Back links in the sidebar and footer"],
+        ["repository, branch", "GitHub link, Edit on GitHub, source link"],
+        ["logo, ogImage", "Header mark, favicon, social preview"],
+        ["nav", "Header links"],
+        ["groups", "Sidebar group order"],
+        ["popular", "Search results before typing"],
+        ["searchHint", "Empty search message"],
+        ["theme", "CSS custom properties on :root"]
+      ]
+    }
+  ]
+}

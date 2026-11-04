@@ -1,0 +1,26 @@
+{
+  "path": "/docs/examples",
+  "title": "Examples",
+  "group": "Examples",
+  "order": 0,
+  "description": "Copyable page patterns. Open one, then use Copy as Markdown or Edit on GitHub to start your own.",
+  "sections": [
+    {
+      "id": "patterns",
+      "title": "Patterns",
+      "paragraphs": ["Each example is a real page in this site."],
+      "links": [
+        {
+          "label": "API endpoint reference",
+          "href": "/docs/examples/api-reference",
+          "icon": "server"
+        },
+        {
+          "label": "CLI command reference",
+          "href": "/docs/examples/cli-reference",
+          "icon": "terminal"
+        }
+      ]
+    }
+  ]
+}

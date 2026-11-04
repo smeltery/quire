@@ -1,0 +1,10 @@
+{
+  "default_lines": 200,
+  "files": {},
+  "total_code_lines": 2500,
+  "default_files": 15,
+  "directories": {
+    ".": 24,
+    "public/brands/chat": 6
+  }
+}

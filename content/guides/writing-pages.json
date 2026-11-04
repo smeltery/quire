@@ -1,0 +1,48 @@
+{
+  "path": "/docs/guides/writing-pages",
+  "title": "Write pages",
+  "group": "Guides",
+  "description": "Each page is one JSON file in content/. Sections can mix paragraphs, lists, tables, code, notices, diagrams, endpoints, and link cards.",
+  "sections": [
+    {
+      "id": "file",
+      "title": "Create a page file",
+      "paragraphs": [
+        "Put the file anywhere under content/. The folder does not set the URL; the path field does. Keep paths under /docs so the prerender and navigation stay consistent."
+      ],
+      "code": "{\n  \"path\": \"/docs/guides/install\",\n  \"title\": \"Install\",\n  \"group\": \"Guides\",\n  \"description\": \"Install the CLI on macOS, Linux, or Windows.\",\n  \"sections\": [\n    { \"id\": \"macos\", \"title\": \"macOS\", \"paragraphs\": [\"Use Homebrew.\"] }\n  ]\n}",
+      "language": "content/guides/install.json"
+    },
+    {
+      "id": "order",
+      "title": "Ordering",
+      "paragraphs": [
+        "Pages sort by group order from brand.json, then by an optional order number, then by title. Continue reading links follow the same order."
+      ]
+    },
+    {
+      "id": "blocks",
+      "title": "Section blocks",
+      "paragraphs": [
+        "A section renders its blocks in a fixed order: heading or endpoint, paragraphs, notice, diagram, list, table, code, and link cards. Omit any block you do not need."
+      ],
+      "items": [
+        "paragraphs: an array of plain-text paragraphs.",
+        "notice: a highlighted callout.",
+        "items: a bullet list.",
+        "table: rows of cells; the first row is the header.",
+        "code and language: a highlighted, copyable block. The language label picks the highlighter.",
+        "links: cards to other pages, with an optional icon."
+      ]
+    },
+    {
+      "id": "diagrams",
+      "title": "Sequence diagrams",
+      "paragraphs": [
+        "A diagram lists actors and steps. Each step is [from, to, label] by actor index; equal indexes draw a self-step. The same data exports as Mermaid in Copy as Markdown, and CI parses it."
+      ],
+      "code": "\"diagram\": {\n  \"title\": \"Login sequence\",\n  \"actors\": [\"Browser\", \"API\"],\n  \"steps\": [[0, 1, \"POST /login\"], [1, 0, \"Session cookie\"]],\n  \"caption\": \"The API sets an HTTP-only cookie.\"\n}",
+      "language": "JSON"
+    }
+  ]
+}

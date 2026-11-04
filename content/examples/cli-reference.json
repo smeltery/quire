@@ -1,0 +1,33 @@
+{
+  "path": "/docs/examples/cli-reference",
+  "title": "CLI command reference",
+  "group": "Examples",
+  "description": "A command page: synopsis, flags table, and shell examples.",
+  "sections": [
+    {
+      "id": "synopsis",
+      "title": "Synopsis",
+      "paragraphs": [],
+      "code": "acme convert <input> --to <format> [--out <path>]",
+      "language": "Shell"
+    },
+    {
+      "id": "flags",
+      "title": "Flags",
+      "paragraphs": [],
+      "table": [
+        ["Flag", "Default", "Meaning"],
+        ["--to", "required", "Output format"],
+        ["--out", "next to input", "Output path"],
+        ["--quiet", "false", "Suppress progress output"]
+      ]
+    },
+    {
+      "id": "examples",
+      "title": "Examples",
+      "paragraphs": [],
+      "code": "acme convert photo.png --to webp\nacme convert ./scans --to pdf --out ./out",
+      "language": "Terminal"
+    }
+  ]
+}

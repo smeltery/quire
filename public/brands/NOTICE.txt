@@ -1,0 +1,2 @@
+GitHub SVG icon is from Simple Icons (CC0-1.0): https://github.com/simple-icons/simple-icons
+Chat-provider marks (ChatGPT, Claude, v0, T3 Chat, Scira, Cursor) identify where the "Open in chat" action sends a page. These marks remain the property of their respective owners; their use does not imply endorsement.

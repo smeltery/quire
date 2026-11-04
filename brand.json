@@ -1,0 +1,40 @@
+{
+  "name": "quire",
+  "wordmark": "quire.",
+  "description": "quire — a branded, searchable documentation site you can fork for any application.",
+  "homepage": "https://github.com/smeltery/quire",
+  "repository": "https://github.com/smeltery/quire",
+  "branch": "main",
+  "logo": "/logo.svg",
+  "ogImage": "/og.svg",
+  "nav": [
+    { "label": "Guides", "href": "/docs/guides/branding" },
+    { "label": "Examples", "href": "/docs/examples" }
+  ],
+  "groups": ["Start here", "Guides", "Reference", "Examples"],
+  "popular": [
+    "/docs",
+    "/docs/quick-start",
+    "/docs/guides/branding",
+    "/docs/guides/writing-pages",
+    "/docs/reference/page-schema"
+  ],
+  "searchHint": "Try “brand”, “diagram”, or “deploy”.",
+  "theme": {
+    "font": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+    "ink": "#242522",
+    "muted": "#6d7069",
+    "paper": "#f6f6f3",
+    "line": "#e1e2dc",
+    "surface": "#fcfdf8",
+    "subtle": "#7b8570",
+    "accent": "#577548",
+    "accent-ink": "#456336",
+    "accent-mid": "#789166",
+    "accent-soft": "#e9efdf",
+    "accent-line": "#dbe1d2",
+    "accent-border": "#b4c4a3",
+    "button": "#292c26",
+    "button-hover": "#48543f"
+  }
+}

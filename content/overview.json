@@ -1,0 +1,75 @@
+{
+  "path": "/docs",
+  "title": "Overview",
+  "group": "Start here",
+  "order": 0,
+  "description": "quire is a static documentation site you fork once per application. Write pages as JSON, set your brand once, and ship searchable docs anywhere.",
+  "hero": {
+    "eyebrow": "DEVELOPER DOCUMENTATION",
+    "title": "Pages in.",
+    "emphasis": "Branded docs out.",
+    "notice": "Static by design. The build emits plain HTML, CSS, and JavaScript, so any static host can serve it without a server runtime.",
+    "base": {
+      "label": "Local preview",
+      "value": "http://localhost:5173/docs"
+    }
+  },
+  "sections": [
+    {
+      "id": "what-it-is",
+      "title": "What quire gives you",
+      "paragraphs": [
+        "quire packages a complete documentation experience: a sidebar grouped by topic, a per-page table of contents, keyboard search with live preview, copyable code blocks, sequence diagrams, and per-page actions for editing on GitHub or opening the page in an AI chat.",
+        "Your application supplies two things: a brand.json describing its name, links, and colors, and a content folder of JSON pages. Everything else is shared template code."
+      ]
+    },
+    {
+      "id": "how-it-builds",
+      "title": "How a page reaches readers",
+      "paragraphs": [
+        "Vite bundles one single-page app. After the bundle closes, the build writes an HTML entry for every content page with its own title, description, and social tags, so links preview correctly and hosts serve real files instead of relying on rewrites."
+      ],
+      "diagram": {
+        "title": "Build pipeline sequence",
+        "actors": ["Author", "quire build", "Static host"],
+        "steps": [
+          [0, 1, "brand.json + content/**/*.json"],
+          [1, 1, "Type-check and bundle"],
+          [1, 1, "Prerender one HTML file per page"],
+          [1, 2, "dist/ upload"],
+          [2, 0, "Branded, searchable docs"]
+        ],
+        "caption": "Content and brand stay data. The template code never needs to change for a new application."
+      }
+    },
+    {
+      "id": "next",
+      "title": "Where to go next",
+      "paragraphs": [
+        "Start with the quick start, then brand the site and write your first page."
+      ],
+      "links": [
+        {
+          "label": "Quick start",
+          "href": "/docs/quick-start",
+          "icon": "terminal"
+        },
+        {
+          "label": "Brand the site",
+          "href": "/docs/guides/branding",
+          "icon": "folder"
+        },
+        {
+          "label": "Write pages",
+          "href": "/docs/guides/writing-pages",
+          "icon": "shell"
+        },
+        {
+          "label": "Deploy",
+          "href": "/docs/guides/deploying",
+          "icon": "server"
+        }
+      ]
+    }
+  ]
+}

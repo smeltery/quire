@@ -1,7 +1,7 @@
 # quire
 
 [![CI](https://github.com/smeltery/quire/actions/workflows/ci.yml/badge.svg)](https://github.com/smeltery/quire/actions/workflows/ci.yml)
-[![Release](https://img.shields.io/github/v/release/smeltery/quire?sort=semver)](https://github.com/smeltery/quire/releases)
+[![Release](https://img.shields.io/github/v/release/smeltery/quire?sort=semver&logo=github)](https://github.com/smeltery/quire/releases)
 [![License: PolyForm Shield 1.0.0](https://img.shields.io/badge/license-PolyForm%20Shield%201.0.0-blue.svg)](LICENSE)
 [![Bun](https://img.shields.io/badge/bun-1.3-f9f1e1?logo=bun&logoColor=black)](https://bun.sh)
 [![React 19](https://img.shields.io/badge/react-19-61dafb?logo=react&logoColor=black)](https://react.dev)
